@@ -137,7 +137,14 @@ LOGIN_URL = '/login'
 
 #para deploy heroku
 
-#STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
-STATICFILES_DIRS = [BASE_DIR / 'static']
+
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
+
+#trying to fix static files heroku
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',     # finds files stored in the `STATICFILES_DIRS` setting.
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder', # finds files stored in the 'static' subdirectory of each app.
+]
