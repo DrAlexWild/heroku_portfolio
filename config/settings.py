@@ -139,7 +139,7 @@ LOGIN_URL = '/login'
 
 
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
-#STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
 #trying to fix static files heroku
