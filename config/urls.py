@@ -32,7 +32,7 @@ app_name = "portfolio"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', views.home_page_view, name='home'),
+    path('', views.home_page_view, name='home'),
     path('about_me', views.about_me_page_view, name='about_me'),
     path('blog', views.blog_page_view, name='blog'),
     path('edita/<int:blog_post_id>', views.edita_blog_post_view, name='edita'),
