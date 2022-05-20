@@ -44,7 +44,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'whitenoise.runserver_nostatic',  # novo
+
+    'cloudinary_storage',
+    'cloudinary',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "idkalexanderbot",
+    'API_KEY': "386162192662489",
+    'API_SECRET': "qoF6IYz2JsDMOPRN5WlR6yxCWlk",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -129,7 +138,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #para imagens
-MEDIA_URL = '/media/'
+MEDIA_URL = '/portfolio/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #para login
