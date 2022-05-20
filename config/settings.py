@@ -138,7 +138,7 @@ LOGIN_URL = '/login'
 #para deploy heroku
 
 
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static')), str(BASE_DIR.joinpath('media'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
