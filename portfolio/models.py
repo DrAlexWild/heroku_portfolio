@@ -38,7 +38,7 @@ class Project(models.Model):
     descricao = models.TextField()
     linguagens = models.ManyToManyField(Language)
     link = models.CharField(max_length=2000)
-    images_description = models.ManyToManyField(Project_image_description)
+    images_description = models.ManyToManyField(Project_image_description, related_name='picture_description')
     def __str__(self):
         return self.nome[:50]
 
