@@ -28,6 +28,9 @@ class Professor(models.Model):
     def __str__(self):
         return self.nome[:50]
 
+class Project_image_description(models.Model):
+    description = models.TextField(max_length=2000)
+    image = models.ImageField(null=True, blank=True)
 
 class Project(models.Model):
     nome = models.CharField(max_length=60)
@@ -35,6 +38,7 @@ class Project(models.Model):
     descricao = models.TextField()
     linguagens = models.ManyToManyField(Language)
     link = models.CharField(max_length=2000)
+    images_description = models.ManyToManyField(Project_image_description)
     def __str__(self):
         return self.nome[:50]
 
@@ -74,6 +78,8 @@ class Quiz(models.Model):
 
     def __str__(self):
         return self.name[:50]
+
+
 
 
 
