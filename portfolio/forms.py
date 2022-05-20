@@ -8,7 +8,7 @@ from .models import Professor
 from .models import Language
 from .models import Hobbie
 from .models import Quiz
-
+from .models import Project_image_description
 
 """class TarefaForm(ModelForm):
     class Meta:
@@ -115,3 +115,8 @@ class QuizForm(ModelForm):
 
         # texto auxiliar a um determinado campo do formulário
         help_texts = {}
+
+class Project_image_description(ModelForm):
+    class Meta:
+        model = Project_image_description
+        fields = '__all__'
