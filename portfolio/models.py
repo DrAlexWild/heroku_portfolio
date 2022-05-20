@@ -28,13 +28,19 @@ class Professor(models.Model):
     def __str__(self):
         return self.nome[:50]
 
-
+class Projetc_topic(models.Model):
+    name = models.CharField(max_length=60)
+    description = models.TextField(max_length=2000)
+    image = models.ImageField(null=True, blank=True)
+    def __str__(self):
+        return self.name[:60]
 
 class Project(models.Model):
     nome = models.CharField(max_length=60)
     ano = models.IntegerField()
     descricao = models.TextField()
     linguagens = models.ManyToManyField(Language)
+    project_topics = models.ManyToManyField(Projetc_topic)
     link = models.CharField(max_length=2000)
     def __str__(self):
         return self.nome[:50]
