@@ -89,8 +89,9 @@ margin:70px;
 background-color:#2f3333;
 }
 
-.project {
+.projects {
   display: grid;
+  grid-area: projects;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 1fr 0.5fr 4fr 0.1fr;
   gap: 0px;
@@ -108,9 +109,6 @@ background-color:#2f3333;
 
 }
 
-.project *{
-    padding: 10px;
-}
 
 .project_title{
     grid-area: title;
