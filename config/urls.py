@@ -41,7 +41,7 @@ urlpatterns = [
     path('web_programming/', views.web_programming_view, name='web_programming'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
-    path('projects', views.blog_page_view, name='blog'),
+    path('projects', views.projects_view, name='blog'),
 ]
 
 #para imagens
