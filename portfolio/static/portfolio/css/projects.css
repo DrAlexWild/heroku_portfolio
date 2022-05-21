@@ -85,7 +85,7 @@ html, body , .container {
 .projects {
 grid-area: projects;
 font-size: 30px;
-margin:2px;
+margin:40px;
 background-color:#20b6ba;
 border-radius: 20px;
 box-shadow: 5px 5px 15px black;
@@ -94,7 +94,7 @@ box-shadow: 5px 5px 15px black;
 .project {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr 4fr 0.1fr;
+  grid-template-rows: 0.5fr 0.2fr 0.2fr 4fr 0.1fr;
   gap: 5px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -107,7 +107,6 @@ box-shadow: 5px 5px 15px black;
   margin:5px;
   border: 16px solid white;
   border-radius:20px;
-
 }
 
 
