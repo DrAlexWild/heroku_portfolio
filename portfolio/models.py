@@ -18,7 +18,7 @@ class Blog_Post(models.Model):
 class Language(models.Model):
     nome = models.CharField(max_length=60)
     ano = models.IntegerField()
-    descricao = models.CharField(max_length=2000)
+    descricao = models.TextField(max_length=2000)
     def __str__(self):
         return self.nome[:50]
 
