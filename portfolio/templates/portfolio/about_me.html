@@ -24,11 +24,9 @@
         {% for language in languages %}
         <div class="language">
             <h1>{{language.nome}}</h1>
-            <pre>
-                {{language.descricao}}
+            <pre>{{language.descricao}}
                 {{language.ano}}
             </pre>
-            <a>link to related project</a>
         </div>
         {% endfor %}
 
