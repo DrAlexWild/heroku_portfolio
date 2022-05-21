@@ -30,6 +30,7 @@
             <div class="languages">
                 {% for language in project.languages %}
                     <p>{{language.nome}}</p>
+                {% endfor %}
             </div>
             <div class="project topics">
                 {% for project_topic in class.project_topics.all %}
@@ -37,11 +38,13 @@
                     <img src="{{ project_topic.image.url|default_if_none:'#' }}" class="project_topic_img" alt=""/>
                     <pre>{{project_topic.description}}</pre>
                 </div>
+                {% endfor %}
             </div>
             <div class="project_end">
                 <p>{{project.ano}}</p>
             </div>
         </div>
+        {% endfor %}
     </div>
     <div class="footer">
         <p>
