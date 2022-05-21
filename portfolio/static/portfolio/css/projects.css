@@ -107,17 +107,18 @@ box-shadow: 5px 5px 15px black;
   margin:40px;
   border: 16px solid white;
   border-radius:20px;
-  padding:20px;
 
 }
 
 
 .project_title{
     grid-area: title;
+    padding:10px;
 }
 
 .project_description{
     grid-area: project_description;
+    padding:10px;
 }
 
 .project_languages{
@@ -128,7 +129,7 @@ box-shadow: 5px 5px 15px black;
     grid-area:project_topics;
     display: flex;
     flex-flow: row wrap;
-    margin:40px;
+    margin:5px;
 }
 
 .project_topic img{
