@@ -111,7 +111,7 @@ box-shadow: 5px 5px 15px black;
 
 }
 
-.project > div {
+.project *{
   margin:50px;
 }
 
