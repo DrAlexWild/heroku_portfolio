@@ -107,9 +107,9 @@ box-shadow: 5px 5px 15px black;
   margin:40px;
   border: 16px solid white;
   border-radius:20px;
+  padding:20px;
 
 }
-
 
 .project_title{
     grid-area: title;
