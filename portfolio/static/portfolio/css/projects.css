@@ -108,6 +108,10 @@ background-color:#2f3333;
 
 }
 
+.project *{
+    padding: 10px;
+}
+
 .project_title{
     grid-area: title;
 }
