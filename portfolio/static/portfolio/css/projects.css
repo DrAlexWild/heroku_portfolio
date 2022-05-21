@@ -99,13 +99,33 @@ background-color:#2f3333;
     "title"
     "description"
     "languages"
-    "project_topic"
+    "project_topics"
     "project end";
 
   margin:15px;
   border: 16px solid white;
   border-radius:20px;
 
+}
+
+.project_title{
+    grid-area: title;
+}
+
+.project_description{
+    grid-area: project_description;
+}
+
+.project_languages{
+    grid-area: project_languages;
+}
+
+.project_topics{
+    grid-area:project_topics;
+}
+
+.prject_end{
+    grid-area:project_end;
 }
 
 /* For presentation only, no need to copy the code below */

@@ -23,16 +23,18 @@
     <div class="projects">
         {% for project in projects %}
         <div class="project">
-            <h1>{{project.nome}}</h1>
-            <div class="description">
+            <div class="project_title">
+                <h1>{{project.nome}}</h1>
+            </div>
+            <div class="project_description">
                 <h2>{{project.descricao}}</h2>
             </div>
-            <div class="languages">
+            <div class="project_languages">
                 {% for language in project.languages %}
                     <p>{{language.nome}}</p>
                 {% endfor %}
             </div>
-            <div class="project topics">
+            <div class="project_topics">
                 {% for project_topic in class.project_topics.all %}
                 <div class="project topic">
                     <img src="{{ project_topic.image.url|default_if_none:'#' }}" class="project_topic_img" alt=""/>
