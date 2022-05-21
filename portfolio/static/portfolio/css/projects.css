@@ -104,7 +104,7 @@ box-shadow: 5px 5px 15px black;
     "project_topics"
     "project_end";
 
-  margin:40px;
+  margin:5px;
   border: 16px solid white;
   border-radius:20px;
 
@@ -113,7 +113,7 @@ box-shadow: 5px 5px 15px black;
 
 .project_title{
     grid-area: title;
-    padding:10px;
+    padding:2px;
 }
 
 .project_description{
