@@ -129,3 +129,4 @@ def logout_view(request):
 def projects_view(request):
     context = {'projects': Project.objects.all()}
     return render(request, 'portfolio/projects.html', context=context)
+
