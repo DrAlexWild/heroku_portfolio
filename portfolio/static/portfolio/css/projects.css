@@ -84,13 +84,14 @@ html, body , .container {
 }
 
 .projects {
-grid-area: blog;
+grid-area: projects;
 font-size: 30px;
 margin:70px;
 background-color:#2f3333;
 }
 
-.project {  display: grid;
+.project {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 1fr 0.5fr 4fr 0.1fr;
   gap: 0px;
@@ -122,9 +123,11 @@ background-color:#2f3333;
 
 .project_topics{
     grid-area:project_topics;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-.prject_end{
+.project_end{
     grid-area:project_end;
 }
 
