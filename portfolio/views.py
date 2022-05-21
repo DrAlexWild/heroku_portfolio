@@ -14,6 +14,7 @@ from .forms import BlogPostForm
 from .forms import QuizForm
 from .models import Hobbie
 from .models import Quiz
+from .models import Project
 
 from .functions import build_graph
 
@@ -124,3 +125,7 @@ def logout_view(request):
         request, 'portfolio/login.html',
         {'message': "Logged Out"}
     )
+
+def projects_view(request):
+    context = {'projects': Project.objects.all()}
+    return render(request, context=context)
