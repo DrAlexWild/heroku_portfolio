@@ -111,9 +111,6 @@ box-shadow: 5px 5px 15px black;
 
 }
 
-.project *{
-  margin:50px;
-}
 
 .project_title{
     grid-area: title;
@@ -131,6 +128,7 @@ box-shadow: 5px 5px 15px black;
     grid-area:project_topics;
     display: flex;
     flex-flow: row wrap;
+    margin:40px;
 }
 
 .project_topic img{
