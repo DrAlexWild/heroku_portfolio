@@ -48,7 +48,7 @@ class Project(models.Model):
 class Class(models.Model):
     nome = models.CharField(max_length=60)
     ano = models.IntegerField()
-    descricao = models.CharField(max_length=2000)
+    descricao = models.TextField(max_length=2000)
     linguagens = models.ManyToManyField(Language)
     docente_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)
     docentes_praticas = models.ManyToManyField(Professor, related_name='caderias')
