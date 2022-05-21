@@ -99,8 +99,8 @@ box-shadow: 5px 5px 15px black;
   grid-auto-flow: row;
   grid-template-areas:
     "title"
-    "description"
-    "languages"
+    "project_description"
+    "project_languages"
     "project_topics"
     "project end";
 
