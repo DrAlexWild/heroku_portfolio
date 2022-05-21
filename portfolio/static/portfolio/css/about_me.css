@@ -107,8 +107,9 @@ margin:5px;
   background-attachment: fixed;
   background-position: center;
   background-size: auto;
-grid-area: cadeiras;
-background-color:white;
+  grid-area: cadeiras;
+  background-color:white;
+  margin:10px;
 }
 
 .cadeiras img{
@@ -129,6 +130,11 @@ width: 600px;
 }
 
 .cadeiras h1 {
+  width: 400px;
+
+}
+
+.cadeiras pre {
   width: 400px;
 
 }
