@@ -42,6 +42,7 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('projects', views.projects_view, name='projects'),
+    path('about_this_website', views.about_this_website_view, name='about_this_website'),
 ]
 
 #para imagens

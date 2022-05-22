@@ -130,3 +130,5 @@ def projects_view(request):
     context = {'projects': Project.objects.all()}
     return render(request, 'portfolio/projects.html', context=context)
 
+def about_this_website_view(request):
+    return render(request, 'portfolio/about_this_website.html')
