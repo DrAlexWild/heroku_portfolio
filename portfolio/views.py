@@ -132,3 +132,6 @@ def projects_view(request):
 
 def about_this_website_view(request):
     return render(request, 'portfolio/about_this_website.html')
+
+def contact_view(request):
+    return render(request, 'portfolio/contact.html')
