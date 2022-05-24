@@ -40,7 +40,7 @@
                 {% for project_topic in project.project_topics.all %}
                 <div class="project_topic">
                     <img src="{{ project_topic.image.url|default_if_none:'#' }}" class="project_topic_img" alt=""/>
-                    <pre>{{project_topic.description}}</pre>
+                    <p>{{project_topic.description}}</p>
                 </div>
                 {% endfor %}
             </div>

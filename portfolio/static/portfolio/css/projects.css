@@ -118,6 +118,8 @@ box-shadow: 5px 5px 15px black;
 .project_description{
     grid-area: project_description;
     padding:10px;
+    word-wrap: break-word;
+    width: 1000px;
 }
 
 .project_languages{
@@ -127,7 +129,7 @@ box-shadow: 5px 5px 15px black;
 .project_topics{
     grid-area:project_topics;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     margin:5px;
 }
 
@@ -135,6 +137,10 @@ box-shadow: 5px 5px 15px black;
   width:700px;
   height:auto;
   padding:10px;
+}
+
+.project_topic p{
+  word-wrap: break-word;
 }
 
 .project_end{
