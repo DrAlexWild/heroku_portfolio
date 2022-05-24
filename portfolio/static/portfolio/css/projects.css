@@ -87,7 +87,6 @@ margin:40px;
 .project {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.2fr 0.2fr 4fr 0.1fr;
   gap: 5px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -99,7 +98,7 @@ margin:40px;
 
   margin:25px;
   box-shadow: 40px 40px 40px black;
-  background-color: #20b6ba;
+  background-color: white;
   border-radius: 40px;
 }
 
