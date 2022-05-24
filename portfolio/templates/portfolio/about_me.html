@@ -34,7 +34,7 @@
         {% for class in classes %}
         <div class="cadeira">
             <h1>{{class.nome}}</h1>
-            <img src="{{ class.image.url|default_if_none:'#' }}">
+
             <p>
 {{class.descricao}}<br>
 Languages:{% for language in class.linguagens.all %}{{language.nome}}; {% endfor %}<br>
@@ -43,6 +43,7 @@ Theoretical Teachers:<a href="{{class.docente_teorica.link}}"> {{class.docente_t
 Pratical Teachers:{% for docente_pratica in class.docentes_praticas.all %}<a href="{{docente_pratica.link}}"> {{docente_pratica.nome}} </a>;<br> {% endfor %}
 Projects: {{class.projetos.nome}}.
             </p>
+            <img src="{{ class.image.url|default_if_none:'#' }}">
         </div>
         {% endfor %}
     </div>
