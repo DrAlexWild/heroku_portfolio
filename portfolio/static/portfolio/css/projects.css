@@ -8,11 +8,7 @@
     "nav"
     "projects"
     "footer";
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
+
 }
 
 body{
