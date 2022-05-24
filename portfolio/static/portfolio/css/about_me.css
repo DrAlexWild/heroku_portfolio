@@ -110,7 +110,6 @@ margin:5px;
   grid-area: cadeiras;
   background-color:white;
   margin:10px;
-  width 500px;
 }
 
 .cadeiras img{
@@ -118,6 +117,10 @@ border-radius: 20px 0 0 20px;
 width:auto;
 height:200px;
 width: 300px;
+}
+
+.cadeira{
+    width:600px;
 }
 
 .cadeiras > div {
