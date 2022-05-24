@@ -86,9 +86,6 @@ html, body , .container {
 grid-area: projects;
 font-size: 30px;
 margin:40px;
-background-color:#20b6ba;
-border-radius: 20px;
-box-shadow: 5px 5px 15px black;
 }
 
 .project {
@@ -104,9 +101,9 @@ box-shadow: 5px 5px 15px black;
     "project_topics"
     "project_end";
 
-  margin:5px;
-  border: 30px solid black;
-  border-radius:20px;
+  margin:25px;
+  box-shadow: 40px 40px 40px black;
+  background-color: #20b6ba;
 }
 
 
@@ -141,29 +138,14 @@ box-shadow: 5px 5px 15px black;
 
 .project_topic p{
   word-wrap: break-word;
+  border: 10px solid white;
+  border-radius: 40px;
 }
 
 .project_end{
     grid-area:project_end;
 }
 
-/* For presentation only, no need to copy the code below */
-
-.container * {
-  border: 1px solid red;
-  position: relative;
-}
-
-.container *:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
 
 
 
