@@ -40,7 +40,7 @@ def build_graph(objects):
         plt.bar(users, values, color ='grey',
                 width = 0.4)
 
-        plt.xlabel("Courses offered")
+        plt.xlabel("DrAlexWild Quiz scores")
         plt.ylabel("Score")
         plt.title("Users")
         plt.savefig('portfolio/static/portfolio/images/my_graph.png')
