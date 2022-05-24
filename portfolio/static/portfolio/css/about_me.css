@@ -108,40 +108,35 @@ margin:5px;
   background-position: center;
   background-size: auto;
   grid-area: cadeiras;
-  background-color:white;
   margin:10px;
 }
 
 .cadeiras img{
-border-radius: 20px 0 0 20px;
-width:auto;
 height:200px;
 width: 300px;
 }
 
-.cadeira{
-    width:600px;
+.cadeira {
+    max-height:400px;
+}
+
+.cadeira pre{
+    word-wrap: break-word;
+}
+.cadeira h1{
+    width:800px;
 }
 
 .cadeiras > div {
   background-color:#20b6ba;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   border-radius: 20px;
   box-shadow: 5px 5px 15px black;
   margin:10px;
   padding:5px;
 }
 
-.cadeiras h1 {
-  width: 400px;
-
-}
-
-.cadeiras pre {
-  width: 100px;
-
-}
 
 .hobbies {
 grid-area: hobbies;
