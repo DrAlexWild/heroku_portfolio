@@ -80,13 +80,14 @@ html, body , .container {
 
 .projects {
 grid-area: projects;
-font-size: 30px;
+display: flex;font-size: 30px;
 margin:40px;
 }
 
 .project {
   display: grid;
   grid-template-columns: 1fr;
+  /* grid-template-rows: 0.5fr 0.2fr 0.2fr 4fr 0.1fr; */
   gap: 5px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -126,10 +127,10 @@ margin:40px;
     margin:5px;
     border: 10px solid white;
     border-radius: 40px;
-}
+background-color: #20b6ba;}
 
 .project_topic img{
-  width:700px;
+  width: 400px;
   height:auto;
   padding:10px;
 }
@@ -141,7 +142,3 @@ margin:40px;
 .project_end{
     grid-area:project_end;
 }
-
-
-
-
