@@ -80,15 +80,15 @@ html, body , .container {
 
 .projects {
 grid-area: projects;
-display: flex;font-size: 30px;
-margin:40px;
+display:flex;
+flex-flow: column wrap;
+font-size: 20px;
+margin:10px;
 }
 
 .project {
   display: grid;
   grid-template-columns: 1fr;
-  /* grid-template-rows: 0.5fr 0.2fr 0.2fr 4fr 0.1fr; */
-  gap: 5px;
   grid-auto-flow: row;
   grid-template-areas:
     "title"
@@ -106,18 +106,22 @@ margin:40px;
 
 .project_title{
     grid-area: title;
-    padding:2px;
+    padding-left:10px;
+    box-shadow: 0px 10px 20px black;
 }
 
 .project_description{
     grid-area: project_description;
-    padding:10px;
+    padding-left:10px;
     word-wrap: break-word;
     width: 1000px;
+
 }
 
 .project_languages{
     grid-area: project_languages;
+    padding-left:10px;
+
 }
 
 .project_topics{
@@ -125,12 +129,18 @@ margin:40px;
     display: flex;
     flex-flow: column;
     margin:5px;
-    border: 10px solid white;
+    background-color: #20b6ba;
     border-radius: 40px;
-background-color: #20b6ba;}
+}
+
+.project_topic{
+  display:flex;
+    border-color:white;
+  border-style:solid;
+}
 
 .project_topic img{
-  width: 400px;
+  width:400px;
   height:auto;
   padding:10px;
 }
@@ -141,4 +151,10 @@ background-color: #20b6ba;}
 
 .project_end{
     grid-area:project_end;
+  padding-left:10px;
+  box-shadow: 0px 10px 20px 10 black;
 }
+
+
+
+
