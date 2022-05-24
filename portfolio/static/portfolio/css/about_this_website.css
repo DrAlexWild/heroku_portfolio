@@ -66,11 +66,22 @@ body{
 }
 
 .about {
+border-radius: 20px;
 grid-area: about;
 font-size: 30px;
 margin:30px;
 background-color:#20b6ba;
  }
+
+.about h1{
+  box-shadow: 0px 4px 1px black;
+
+
+}
+
+.about *{
+  padding: 4px;
+}
 
 .images {
   display: flex;
