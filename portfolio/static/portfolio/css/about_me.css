@@ -10,12 +10,6 @@
     "cadeiras"
     "hobbies"
     "footer";
-
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
 }
 
 body{
@@ -70,28 +64,18 @@ body{
 
 .languages {
 grid-area: languages;
-background-color:white;
-
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
 align-items: space-around;
-background-color:#e6814e;
 padding:50px;
-
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  align-items: start;
 }
 
 .languages > div{
   display: flex;
   justify-content: space-around;
   border-radius: 20px;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 40px 40px 40px black;
   margin:10px;
   background-color:#20b6ba;
 }
@@ -102,11 +86,6 @@ margin:5px;
 
 
 .cadeiras {
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
   grid-area: cadeiras;
   margin:10px;
 }
@@ -125,7 +104,7 @@ padding: 20px;
     word-wrap: break-word;
 }
 .cadeira h1{
-    width:800px;
+    padding-right: 20px;
 }
 
 .cadeiras > div {
@@ -152,7 +131,7 @@ padding:50px;
   display: flex;
   justify-content: space-around;
   border-radius: 20px;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 40px 40px 40px black;
   margin:10px;
   background-color:#20b6ba;
 }
