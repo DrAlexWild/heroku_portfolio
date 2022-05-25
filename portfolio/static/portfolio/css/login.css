@@ -70,6 +70,14 @@ grid-area: login_area;
 font-size: 30px;
 margin:30px;
 background-color:#20b6ba;
+  border-radius:20px;
+ }
+
+.login_area *{
+grid-area: login_area;
+font-size: 30px;
+margin:30px;
+  border-radius:10px;
  }
 
 .footer {
