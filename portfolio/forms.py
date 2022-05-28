@@ -37,9 +37,7 @@ class BlogPostForm(ModelForm):
     class Meta:
         model = Blog_Post
         fields = '__all__'
-
         #autor data titulo descricao
-
         # inserção de classes CSS para formatação de cada campo do formulário
         widgets = {
             'autor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor...'}),
@@ -49,8 +47,6 @@ class BlogPostForm(ModelForm):
             'data': forms.DateInput(format='%m/%d/%Y'),
 
         }
-
-
         # texto a exibir junto à janela de inserção
         labels = {
             'autor': 'Author',
@@ -59,8 +55,6 @@ class BlogPostForm(ModelForm):
             'descricao': 'Description',
             'image': 'Image',
         }
-
-
         # texto auxiliar a um determinado campo do formulário
         help_texts = {}
 
@@ -110,8 +104,6 @@ class QuizForm(ModelForm):
             'question_3': 'to display multiple elements inside a div we can use display',
             'name': 'the name you would like to display on the leaderboard'
         }
-
-
         # texto auxiliar a um determinado campo do formulário
         help_texts = {}
 

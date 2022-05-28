@@ -79,7 +79,8 @@ height:600px
 grid-area: article;
 font-size: 30px;
 margin:30px;
-background-color:#20b6ba
+padding:10px;
+background-color:#20b6ba;
  }
 
 .footer {

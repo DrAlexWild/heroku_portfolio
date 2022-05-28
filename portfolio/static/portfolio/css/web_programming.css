@@ -121,6 +121,9 @@ justify-content: space-between;
 height:auto;
 }
 
+.errorlist {
+ display:none;
+}
 
 html, body , .container {
   height: 100%;

@@ -1,5 +1,8 @@
 import matplotlib.pyplot as plt
 
+
+
+
 def quiz_score_calc(quiz):
         score = 0
         #when was django launched: 2005
