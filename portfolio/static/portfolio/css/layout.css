@@ -71,9 +71,19 @@ grid-area: hero;
 font-size: 70px;
 background-image: url('/static/portfolio/images/hero.png');
 background-size:cover;
-height:600px
+height:600px;
+display-content:right;
 }
 
+.image_me {
+  float:right;
+  padding-right: 80px;
+
+}
+
+.image_me img{
+  border-radius: 50%;
+}
 
 .article {
 grid-area: article;
