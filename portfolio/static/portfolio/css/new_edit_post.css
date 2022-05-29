@@ -138,7 +138,9 @@ html, body , .container {
  object-fit: scale-down;
 }
 
-
+.errorlist {
+  display:none;
+}
 
 
 
