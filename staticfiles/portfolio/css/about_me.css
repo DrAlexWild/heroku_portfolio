@@ -10,12 +10,6 @@
     "cadeiras"
     "hobbies"
     "footer";
-
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
 }
 
 body{
@@ -70,28 +64,18 @@ body{
 
 .languages {
 grid-area: languages;
-background-color:white;
-
 display: flex;
 flex-flow: row wrap;
 justify-content: space-around;
 align-items: space-around;
-background-color:#e6814e;
 padding:50px;
-
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  align-items: start;
 }
 
 .languages > div{
   display: flex;
   justify-content: space-around;
   border-radius: 20px;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 40px 40px 40px black;
   margin:10px;
   background-color:#20b6ba;
 }
@@ -102,36 +86,37 @@ margin:5px;
 
 
 .cadeiras {
-  background-image: url("/static/portfolio/images/paralax.jpg");
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: auto;
-grid-area: cadeiras;
-background-color:white;
+  grid-area: cadeiras;
+  margin:10px;
 }
 
 .cadeiras img{
-border-radius: 20px 0 0 20px;
-width:auto;
-height:400px;
-width: 600px;
+height:180px;
+width: 300px;
+padding: 20px;
+}
+
+.cadeira {
+    max-height:400px;
+}
+
+.cadeira pre{
+    word-wrap: break-word;
+}
+.cadeira h1{
+    padding-right: 20px;
 }
 
 .cadeiras > div {
   background-color:#20b6ba;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   border-radius: 20px;
   box-shadow: 5px 5px 15px black;
   margin:10px;
   padding:5px;
 }
 
-.cadeiras h1 {
-  width: 400px;
-
-}
 
 .hobbies {
 grid-area: hobbies;
@@ -146,7 +131,7 @@ padding:50px;
   display: flex;
   justify-content: space-around;
   border-radius: 20px;
-  box-shadow: 5px 5px 15px black;
+  box-shadow: 40px 40px 40px black;
   margin:10px;
   background-color:#20b6ba;
 }
@@ -156,7 +141,7 @@ max-width: 600px;
 }
 
 .hobbie img{
-  max-width:200px;
+  width:200px;
   height:auto;
   padding:10px;
 }
@@ -178,23 +163,6 @@ html, body , .container {
   margin: 0;
 }
 
-/* For presentation only, no need to copy the code below */
-
-.container * {
-  border: 1px solid red;
-  position: relative;
-}
-
-.container *:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
 
 
 
