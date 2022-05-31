@@ -84,7 +84,7 @@ margin:30px;
 grid-area: footer;
 background-color:#2f3333;
 color:white;
-height:60px;
+height:auto;
 display: flex;
 flex-flow: row wrap;
 justify-content: space-between;
