@@ -6,7 +6,7 @@
   grid-auto-flow: row;
   grid-template-areas:
     "nav"
-    "cadeiras"
+    "news_articles"
     "footer";
 }
 
@@ -61,29 +61,29 @@ body{
 }
 
 
-.cadeiras {
-  grid-area: cadeiras;
+.news_articles {
+  grid-area: news_articles;
   margin:10px;
 }
 
-.cadeiras img{
+.news_articles img{
 height:180px;
 width: 300px;
 padding: 20px;
 }
 
-.cadeira {
+.news_article {
     max-height:400px;
 }
 
-.cadeira pre{
+.news_article pre{
     word-wrap: break-word;
 }
-.cadeira h1{
+.news_article h1{
     padding-right: 20px;
 }
 
-.cadeiras > div {
+.news_articles > div {
   background-color:#20b6ba;
   display: flex;
   justify-content: left;
