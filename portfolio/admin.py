@@ -9,6 +9,7 @@ from .models import Language
 from .models import Hobbie
 from .models import Quiz
 from .models import Projetc_topic
+from .models import News_Article
 
 
 admin.site.register(Blog_Post)
@@ -19,3 +20,4 @@ admin.site.register(Language)
 admin.site.register(Hobbie)
 admin.site.register(Quiz)
 admin.site.register(Projetc_topic)
+admin.site.register(News_Article)
