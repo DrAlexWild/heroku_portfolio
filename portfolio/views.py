@@ -16,6 +16,7 @@ from .models import Hobbie
 from .models import Quiz
 from .models import Project
 from .models import News_Article
+from .models import Web_Techniques
 
 from .functions import build_graph
 
@@ -140,5 +141,6 @@ def contact_view(request):
 def other_view(request):
     context = {
         'news_articles': News_Article.objects.all(),
+        'web_techniques': Web_Techniques.objects.all(),
     }
     return render(request, 'portfolio/other.html', context=context)

@@ -20,7 +20,9 @@
       <a href="{% url 'contact' %}">Contact</a>
     </div>
   </div>
+
   <div class="news_articles">
+    <h1 class="title_separator">News Articles</h1>
     {% for news_article in news_articles %}
     <div class="news_article">
       <h1>{{news_article.name}}</h1>
@@ -33,6 +35,26 @@
     </div>
     {% endfor %}
   </div>
+
+
+
+  <div class="web_techniques">
+    <h1 class="title_separator">Web Techniques</h1>
+    {% for web_technique in web_techniques %}
+    <div class="web_technique">
+      <h1>{{web_technique.name}}</h1>
+      <p>
+        {{web_technique.description}}<br>
+        <a href="{{web_technique.link}}" >link</a>
+      </p>
+      <img src="{{ web_technique.image.url|default_if_none:'#' }}">
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
   <div class="footer">
     <p>
       contact: ricardogoncalves126@gmail.com
