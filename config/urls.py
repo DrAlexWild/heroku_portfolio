@@ -44,6 +44,7 @@ urlpatterns = [
     path('projects', views.projects_view, name='projects'),
     path('about_this_website', views.about_this_website_view, name='about_this_website'),
     path('contact', views.contact_view, name='contact'),
+    path('other', views.other_view, name='other'),
 ]
 
 #para imagens

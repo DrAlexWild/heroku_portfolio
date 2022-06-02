@@ -135,3 +135,11 @@ def about_this_website_view(request):
 
 def contact_view(request):
     return render(request, 'portfolio/contact.html')
+
+def other_view(request):
+    context = {
+        'languages': Language.objects.all(),
+        'classes': Class.objects.all(),
+        'hobbies': Hobbie.objects.all(),
+    }
+    return render(request, 'portfolio/other.html', context=context)
