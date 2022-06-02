@@ -83,6 +83,13 @@ class Quiz(models.Model):
         return self.name[:50]
 
 
+class News_Article(models.Model):
+    name = models.TextField(max_length=200)
+    description = models.TextField(max_length=2000)
+    link = models.CharField(max_length=200, blank=True)
+    image = models.ImageField(null=True, blank=True)
 
+    def __str__(self):
+        return self.name[:100]
 
 
