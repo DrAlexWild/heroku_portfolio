@@ -23,6 +23,7 @@ body{
   background-attachment: fixed;
   background-position: center;
   background-size: auto;
+
 }
 
 /* nav section */
@@ -101,6 +102,8 @@ body{
  background-color:#20b6ba;
  margin:20px;
  padding:20px;
+ text-align:center;
+
 }
 
 .labs h1{
@@ -108,6 +111,16 @@ body{
    border-color:white;
   border-style:solid;
   border-radius: 20px;
+}
+
+.labs_images {
+ display:flex;
+ flex-flow:column;
+}
+
+.labs img {
+ width:70%;
+ padding:5px;
 }
 
 .footer {
