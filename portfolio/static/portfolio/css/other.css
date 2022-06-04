@@ -1,13 +1,14 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 3fr 3fr 0.5fr;
+  grid-template-rows: 0.5fr 2fr 2fr 2fr 0.5fr;
   gap: 4% 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "nav"
     "news_articles"
     "web_techniques"
+    "tfc_projects"
     "footer";
 }
 
@@ -130,7 +131,47 @@ padding: 20px;
 }
 
 
+.tfc_projects {
+  grid-area: tfc_projects;
+  margin:10px;
 
+
+}
+
+.tfc_projects_area{
+  content-align:center;
+  display:flex;
+  flex-flow:row wrap;
+}
+
+.tfc_project img{
+ width:90%;
+height:auto;
+padding: 20px;
+}
+
+.tfc_project {
+  text-align:center;
+  display:flex;
+  flex-flow:column;
+  max-width:46%;
+}
+
+.tfc_project h1{
+    padding-right: 20px;
+  background-color:white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px black;
+}
+
+.tfc_projects_area > div {
+  background-color:#20b6ba;
+  justify-content: left;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px black;
+  margin:10px;
+  padding:5px;
+}
 
 
 .title_separator{

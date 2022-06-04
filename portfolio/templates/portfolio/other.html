@@ -53,6 +53,28 @@
   </div>
 
 
+  <div class="tfc_projects">
+    <h1 class="title_separator">FYP from My University</h1>
+    <div class="tfc_projects_area">
+      {% for tfc_project in tfc_projects %}
+      <div class="tfc_project">
+        <h1>{{tfc_project.name}}</h1>
+        <div>
+        <img src="{{ tfc_project.image.url|default_if_none:'#' }}">
+        </div>
+        <p>
+            {{tfc_project.description}}<br>
+            Authors:{{tfc_project.authors}}<br>
+            Leading Teacher:{{tfc_project.teacher}}<br>
+            Year of Publish:{{tfc_project.year}}<br>
+            <a href="{{tfc_project.link}}">link</a>
+        </p>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
 
 
   <div class="footer">

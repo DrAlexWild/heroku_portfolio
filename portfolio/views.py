@@ -17,6 +17,7 @@ from .models import Quiz
 from .models import Project
 from .models import News_Article
 from .models import Web_Techniques
+from .models import TFC_Project
 
 from .functions import build_graph
 
@@ -142,5 +143,6 @@ def other_view(request):
     context = {
         'news_articles': News_Article.objects.all(),
         'web_techniques': Web_Techniques.objects.all(),
+        'tfc_projects': TFC_Project.objects.all(),
     }
     return render(request, 'portfolio/other.html', context=context)
