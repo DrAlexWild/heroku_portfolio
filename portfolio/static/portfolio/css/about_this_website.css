@@ -85,13 +85,17 @@ background-color:#20b6ba;
 
 .images {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+
  }
 
-.images img{
-width: 600;
-height: 600px;
+.images *{
+  text-align:center;
+width: 600px;
+height: 400px;
+}
+
+.video_area video{
+  width:600px;
 }
 
 .footer {
