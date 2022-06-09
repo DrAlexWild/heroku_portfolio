@@ -4,11 +4,25 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'portfolio/css/blog.css' %}">
 
+
+<head>
+    <script>
+    setInterval(
+    function getTime() {
+      const x = document.getElementById("logo_time");
+      var today = new Date();
+      var date = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      x.innerHTML = " Ricardo Gonçalves Portfolio "  + date.toString();
+    }, 1000);
+</script>
+    <script  src="{% static 'portfolio/scripts.js' %}"> </script>
+</head>
+
 <body>
 <div class="container">
     <div class="nav">
         <div class="logo">
-            <p>
+            <p id="logo_time">
                 Ricardo Gonçalves Portfolio
             </p>
         </div>

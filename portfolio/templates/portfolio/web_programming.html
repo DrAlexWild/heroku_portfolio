@@ -2,11 +2,24 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'portfolio/css/web_programming.css' %}">
 
-<body>
+<head>
+    <script>
+    setInterval(
+    function getTime() {
+      const x = document.getElementById("logo_time");
+      var today = new Date();
+      var date = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      x.innerHTML = " Ricardo Gonçalves Portfolio "  + date.toString();
+    }, 1000);
+</script>
+    <script  src="{% static 'portfolio/scripts.js' %}"> </script>
+</head>
+
+<body onload="getTime()">
 <div class="container">
     <div class="nav">
         <div class="logo">
-            <p>
+            <p id="logo_time">
                 Ricardo Gonçalves Portfolio
             </p>
         </div>
@@ -35,6 +48,29 @@
         </form>
     </div>
 
+    <div class="apis">
+        <h1>Playing with APIS</h1>
+        <div class="weather_api">
+            <h1>Weather Api Set to Lisbon current Weather:</h1>
+            <div class="weather_api_fields">
+                <p id="weather"></p>
+                <p id="temperature"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
+                <button onclick="get_weather()">Try It</button>
+            </div>
+        </div>
+
+        <div class="joke_api">
+            <h1>Random Joke API:</h1>
+            <div class="joke_api_fields">
+                <p id="setup"></p>
+                <p id="punchline"></p>
+                <button onclick="get_random_joke()">Try It</button>
+            </div>
+        </div>
+    </div>
+
     <div class="labs">
         <h1>Check out my studys on web programming</h1>
 
@@ -43,6 +79,7 @@
         <a href="https://github.com/DrAlexWild/pw-labs-RicardoGoncalves-a22005012"><img src="/static/portfolio/images/git_labs.PNG" ></a>
         <a href="https://a22005012-pw-lab1.herokuapp.com/"><img src="/static/portfolio/images/study_labs.PNG" ></a>
         </div>
+
     </div>
 
     <div class="footer">
