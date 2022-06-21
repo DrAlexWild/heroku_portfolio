@@ -35,12 +35,10 @@ const options = {
 
 fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
 	.then(response => response.json())
-  //.then(response => console.log(response))
 	.then
 	(data =>
 	    {
 	     const joke = data;
-       console.log(data.body[0].setup)
 	     document.getElementById('setup').innerHTML = String(data.body[0].setup);
         document.getElementById('punchline').innerHTML = String(data.body[0].punchline);
 	    }

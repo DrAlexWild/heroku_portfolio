@@ -50,6 +50,21 @@ padding:10px;
 margin:5px;
 }
 
+@keyframes animation{
+    0% {background-color:red;}
+    25% {background-color:yellow;}
+    50% {background-color:blue;}
+    75% {background-color:green;;}
+    100% {background-color:red;}
+}
+
+.animated {
+    width: 30px; height: 30px;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
 /* Responsive */
 
 * {

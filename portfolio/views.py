@@ -154,7 +154,8 @@ def web_studies_view(request):
         #form.save() commented to disable the creation of entities
         return HttpResponseRedirect(reverse('web_studies'))
 
-    context = {'form': form}
+    context = {'form': form,
+               'languages': Language.objects.all()}
 
 
     return render(request, 'portfolio/web_studies.html', context)

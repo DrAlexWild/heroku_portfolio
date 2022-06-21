@@ -14,6 +14,54 @@
     }
     </script>
 
+    <script>
+        function get_random_joke(){
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '37c02cdfd6mshdf3008d2ab53768p188854jsna994e5734add',
+		'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+	}
+};
+
+fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
+	.then(response => response.json())
+	.then
+	(data =>
+	    {
+	     const joke = data;
+	     document.getElementById('setup').innerHTML = String(data.body[0].setup);
+        document.getElementById('punchline').innerHTML = String(data.body[0].punchline);
+	    }
+
+	);
+
+}
+    </script>
+
+    <script>
+    let counter = 0;
+    function count() {
+    document.getElementById('counter_display').innerHTML = ++counter;}
+
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('counter_button').onclick = count;
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function()
+    {
+        document.querySelectorAll(".color_button").forEach(function(button)
+        {
+            button.onclick = function() {
+            document.querySelector("#color_changer").style.color = button.dataset.color;
+        }
+    });
+    });
+</script>
+
 </head>
 <body>
 <div class="container">
@@ -210,6 +258,173 @@ def web_studies_view(request):
                 <input type="submit" value="Gravar" class="btn btn-success" >
             </form>
         </div>
+    </div>
+    <div class="models">
+        <h1>Models</h1>
+        <pre>
+class Language(models.Model):
+    nome = models.CharField(max_length=60)
+    ano = models.IntegerField()
+    descricao = models.TextField(max_length=2000)
+    def __str__(self):
+        return self.nome[:50]
+
+context = {'form': form,
+               'languages': Language.objects.all()}
+
+{% for language in languages %}
+    div class="language">
+        h3{{language.nome}}/h3
+        pre{{language.descricao}} {{language.ano}}
+    /pre
+    /div
+{% endfor %}
+
+        </pre>
+        <div class="languages">
+            <p>Cycling through 2 entities</p>
+            {% for language in languages %}
+            <div class="language">
+                <h3>{{language.nome}}</h3>
+                <pre>{{language.descricao}} {{language.ano}}
+            </pre>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="api">
+        <h1>API</h1>
+        <pre>
+script>
+function get_random_joke(){
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '37c02cdfd6mshdf3008d2ab53768p188854jsna994e5734add',
+            'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+        }
+    };
+    fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
+        .then(response => response.json())
+        .then
+        (data =>
+            {
+             const joke = data;
+             document.getElementById('setup').innerHTML = String(data.body[0].setup);
+            document.getElementById('punchline').innerHTML = String(data.body[0].punchline);
+            }
+
+        );
+}
+script>
+div class="joke_api"
+h1>Random Joke API:/h1
+div class="joke_api_fields">
+    p id="setup">/p>
+    p id="punchline">/p>
+    button onclick="get_random_joke()">Try It/button>
+/div>
+        </pre>
+        <div class="joke_api">
+            <h1>Random Joke API:</h1>
+            <div class="joke_api_fields">
+                <p id="setup"></p>
+                <p id="punchline"></p>
+                <button onclick="get_random_joke()">Try It</button>
+            </div>
+        </div>
+    </div>
+    <div class="event_listener">
+        <h1>Event Listener</h1>
+        <pre>
+p id="counter_display">Im a counter/p>
+button id="counter_button">Make me count+1/button>
+
+script>
+    let counter = 0;
+    function count() {
+    document.getElementById('counter_display').innerHTML = ++counter;}
+
+    document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('counter_button').onclick = count;
+    });
+/script>
+        </pre>
+        <p id="counter_display">Im a counter</p>
+        <button id="counter_button">Make me count+1</button>
+    </div>
+    <div class="data_attributes">
+        <h1>Data Attributes</h1>
+        <pre>
+script
+    document.addEventListener('DOMContentLoaded', function()
+    {
+        document.querySelectorAll(".color_button").forEach(function(button)
+        {
+            button.onclick = function() {
+            document.querySelector("#color_changer").style.color = button.dataset.color;
+        }
+    });
+    });
+/script
+
+h1 id="color_changer">i change color/h1>
+button data-color="red" class="color_button">Red/button>
+button data-color="blue" class="color_button">Blue/button>
+button data-color="green" class="color_button">Green/button>
+
+        </pre>
+        <h2 id="color_changer">i change color</h2>
+        <button data-color="red" class="color_button">Red</button>
+        <button data-color="blue" class="color_button">Blue</button>
+        <button data-color="green" class="color_button">Green</button>
+    </div>
+    <div class="animations">
+        <h1>Animations</h1>
+        <pre>
+@keyframes animation{
+    0% {background-color:red;}
+    25% {background-color:yellow;}
+    50% {background-color:blue;}
+    75% {background-color:green;;}
+    100% {background-color:red;}
+}
+
+.animated {
+    width: 30px; height: 30px;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+div class="animated">
+        p>Im animated/p>
+/div
+        </pre>
+        <div class="animated">
+            <p>Im animated</p>
+        </div>
+    </div>
+    <div class="access_entities">
+        <h1>Access_entities</h1>
+        <pre>
+path('edita/>int:blog_post_id>', views.edita_blog_post_view, name='edita'),
+
+a class="edit_btn" href="{ url 'edita' blog_post.id }>Edit/a>
+
+@login_required
+def edita_blog_post_view(request, blog_post_id):
+    blog_post = Blog_Post.objects.get(id=blog_post_id)
+    form = BlogPostForm(request.POST or None, request.FILES, instance=blog_post)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('blog'))
+
+    context = {'form': form, 'blog_post_id': blog_post_id}
+    return render(request, 'portfolio/edita.html', context)
+        </pre>
     </div>
 </div>
 </body>
