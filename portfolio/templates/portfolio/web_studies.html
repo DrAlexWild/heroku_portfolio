@@ -66,7 +66,20 @@ fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
 <body>
 <div class="container">
     <h1>web_studies</h1>
-    <h2>Header</h2>
+    <div class="links">
+        <a class="link" href="#api">api</a>
+        <a class="link" href="#header">header</a>
+        <a class="link" href="#grid">grid</a>
+        <a class="link" href="#flex_child">flex_child</a>
+        <a class="link" href="#responsive">responsive</a>
+        <a class="link" href="#forms">forms</a>
+        <a class="link" href="#models">models</a>
+        <a class="link" href="#event_listener">event_listener</a>
+        <a class="link" href="#data_attributes">data_attributes</a>
+        <a class="link" href="#animations">animations</a>
+        <a class="link" href="#access_entities">access_entities</a>
+    </div>
+    <h1 id="header">Header</h1>
     <div class="head_subject">
         <pre>
 head:
@@ -76,7 +89,7 @@ href="{% static 'portfolio/css
 /web_studies.css' %}"<
         </pre>
     </div>
-    <h2>Grid</h2>
+    <h1 id="grid">Grid</h1>
     <div class="grid_subject">
         <div class="css">
             <h3>Css</h3>
@@ -134,7 +147,7 @@ div class="grid">
         <div class="section_2">section_2</div>
         <div class="section_3">section_3</div>
     </div>
-    <h1>Flex</h1>
+    <h1 id="flex_child">Flex + child</h1>
     <div class="flex_subject">
         <div class="flex_css">
             <pre>
@@ -149,6 +162,10 @@ background-color:grey
 background-color:blue;
 padding:20px;
 margin:10px;
+}
+
+.flex_box :nth-child(2n) {
+  background-color: lime;
 }
             </pre>
         </div>
@@ -169,7 +186,7 @@ div class="flex_box"
         <div class="item_2">item_2</div>
         <div class="item_3">item_3</div>
     </div>
-    <h1>Responsive</h1>
+    <h1 id="responsive">Responsive</h1>
     <div class="responsive_subject">
         <p>
 >meta name="viewport" content="width=device-width, initial-scale=1.0"<
@@ -179,12 +196,15 @@ div class="flex_box"
   box-sizing: border-box;
 }
 
+@media(max-width:600px){
+    * {font-size:8px;}
+}
 pre {
 word-break: break-all;
 }
         </pre>
     </div>
-    <h1>Forms</h1>
+    <h1 id="forms">Forms</h1>
     <div class="forms_subject">
         <div class="classic_form">
         <h2>Classic Form</h2>
@@ -259,7 +279,7 @@ def web_studies_view(request):
             </form>
         </div>
     </div>
-    <div class="models">
+    <div class="models" id="models">
         <h1>Models</h1>
         <pre>
 class Language(models.Model):
@@ -293,7 +313,7 @@ context = {'form': form,
 
         </div>
     </div>
-    <div class="api">
+    <div class="api" id="api">
         <h1>API</h1>
         <pre>
 script>
@@ -336,7 +356,7 @@ div class="joke_api_fields">
             </div>
         </div>
     </div>
-    <div class="event_listener">
+    <div class="event_listener" id="event_listener">
         <h1>Event Listener</h1>
         <pre>
 p id="counter_display">Im a counter/p>
@@ -355,7 +375,7 @@ script>
         <p id="counter_display">Im a counter</p>
         <button id="counter_button">Make me count+1</button>
     </div>
-    <div class="data_attributes">
+    <div class="data_attributes" id="data_attributes">
         <h1>Data Attributes</h1>
         <pre>
 script
@@ -381,7 +401,7 @@ button data-color="green" class="color_button">Green/button>
         <button data-color="blue" class="color_button">Blue</button>
         <button data-color="green" class="color_button">Green</button>
     </div>
-    <div class="animations">
+    <div class="animations" id="animations">
         <h1>Animations</h1>
         <pre>
 @keyframes animation{
@@ -406,7 +426,7 @@ div class="animated">
             <p>Im animated</p>
         </div>
     </div>
-    <div class="access_entities">
+    <div class="access_entities" id="access_entities">
         <h1>Access_entities</h1>
         <pre>
 path('edita/>int:blog_post_id>', views.edita_blog_post_view, name='edita'),
