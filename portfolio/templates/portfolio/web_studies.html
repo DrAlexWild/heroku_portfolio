@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/web_studies.css' %}">
+
+    <script>
+    function get_name() {
+      const x = document.getElementById("result_name");
+      x.innerHTML = String(document.getElementById('name_field').value)
+    }
+    </script>
+
+</head>
+<body>
+<div class="container">
+    <h1>web_studies</h1>
+    <h2>Header</h2>
+    <div class="head_subject">
+        <pre>
+head:
+% load static %
+>link rel="stylesheet"
+href="{% static 'portfolio/css
+/web_studies.css' %}"<
+        </pre>
+    </div>
+    <h2>Grid</h2>
+    <div class="grid_subject">
+        <div class="css">
+            <h3>Css</h3>
+            <pre>
+                .grid {
+display:grid;
+grid-template-areas:
+'section_0 section_0 section_0'
+'section_1 section_1 section_2'
+'section_1 section_1 section_3';
+gap:20px;
+padding:5px;
+
+background-color:grey;
+width:auto;
+height:400px;
+}
+
+.section_0 {
+grid-area: section_0;
+background-color:red;
+}
+
+.section_1 {
+grid-area: section_1;
+background-color:yellow;
+}
+
+.section_2 {
+grid-area: section_2;
+background-color:purple;
+}
+
+.section_3 {
+grid-area: section_3;
+background-color:green;
+}
+            </pre>
+        </div>
+        <div class="html">
+            <h3>Html</h3>
+            <pre>
+div class="grid">
+    div class="section_0">section_0/div
+    div class="section_1">section_1/div
+    div class="section_2">section_2/div
+    div class="section_3">section_3/div
+/div>
+            </pre>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="section_0">section_0</div>
+        <div class="section_1">section_1</div>
+        <div class="section_2">section_2</div>
+        <div class="section_3">section_3</div>
+    </div>
+    <h1>Flex</h1>
+    <div class="flex_subject">
+        <div class="flex_css">
+            <pre>
+.flex_box{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+background-color:grey
+}
+
+.flex_box *{
+background-color:blue;
+padding:20px;
+margin:10px;
+}
+            </pre>
+        </div>
+        <div class="flex_html">
+            <pre>
+div class="flex_box"
+    div class="item_0">item_0/div
+    div class="item_1">item_1/div
+    div class="item_2">item_2/div
+    div class="item_3">item_3/div
+/div
+            </pre>
+        </div>
+    </div>
+    <div class="flex_box">
+        <div class="item_0">item_0</div>
+        <div class="item_1">item_1</div>
+        <div class="item_2">item_2</div>
+        <div class="item_3">item_3</div>
+    </div>
+    <h1>Responsive</h1>
+    <div class="responsive_subject">
+        <p>
+>meta name="viewport" content="width=device-width, initial-scale=1.0"<
+        </p>
+        <pre>
+* {
+  box-sizing: border-box;
+}
+
+pre {
+word-break: break-all;
+}
+        </pre>
+    </div>
+    <h1>Forms</h1>
+    <div class="forms_subject">
+        <div class="classic_form">
+        <h2>Classic Form</h2>
+            <pre>
+form action="" method="get">
+    {% csrf_token %}
+    label for="fname">First name:/label
+    input type="text" id="fname" name="fname" value="John">
+    input type="submit" value="Submit"
+/form>
+            </pre>
+            <form action="" method="get">
+                {% csrf_token %}
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="javascript_form">
+            <h2>JavaScript Form</h2>
+            <pre>
+div class="java_form">
+    input type="text" id="name_field" value="John"
+    button onclick="get_name()">press /button
+    p id="result_name">empty /p
+/div>
+
+script>
+function get_name() {
+const x = document.getElementById("result_name");
+x.innerHTML = String(document.getElementById('name_field').value)
+}
+/script>
+            </pre>
+            <div class="java_form">
+                <input type="text" id="name_field" value="John"><br>
+                <button onclick="get_name()">press</button>
+                <p id="result_name">empty</p>
+            </div>
+        </div>
+        <div class="django_forms">
+            <h1>Django models form, to create entity</h1>
+            <pre>
+class BlogPostForm(ModelForm):
+image = forms.ImageField(required=False)
+class Meta:
+    model = Blog_Post
+    fields = '__all__'
+    # texto a exibir junto à janela de inserção
+    labels = {
+        'autor': 'Author',
+        'data': 'Data',
+        'titulo': 'Title',
+        'descricao': 'Description',
+        'image': 'Image',
+    }
+
+def web_studies_view(request):
+    form = BlogPostForm(request.POST or None, request.FILES)
+    if form.is_valid():
+        #form.save() commented to disable the creation of entities
+        return HttpResponseRedirect(reverse('web_studies'))
+
+    context = {'form': form}
+    return render(request, 'portfolio/web_studies.html', context)
+
+            </pre>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Gravar" class="btn btn-success" >
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

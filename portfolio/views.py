@@ -146,3 +146,15 @@ def other_view(request):
         'tfc_projects': TFC_Project.objects.all(),
     }
     return render(request, 'portfolio/other.html', context=context)
+
+
+def web_studies_view(request):
+    form = BlogPostForm(request.POST or None, request.FILES)
+    if form.is_valid():
+        #form.save() commented to disable the creation of entities
+        return HttpResponseRedirect(reverse('web_studies'))
+
+    context = {'form': form}
+
+
+    return render(request, 'portfolio/web_studies.html', context)

@@ -43,9 +43,7 @@ class BlogPostForm(ModelForm):
             'autor': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor...'}),
             'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'titulo...'}),
             'descricao': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'descricao...'}),
-
             'data': forms.DateInput(format='%m/%d/%Y'),
-
         }
         # texto a exibir junto à janela de inserção
         labels = {

@@ -45,6 +45,7 @@ urlpatterns = [
     path('about_this_website', views.about_this_website_view, name='about_this_website'),
     path('contact', views.contact_view, name='contact'),
     path('other', views.other_view, name='other'),
+    path('web_studies', views.web_studies_view, name='web_studies'),
 ]
 
 #para imagens

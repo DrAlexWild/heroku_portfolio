@@ -1,0 +1,91 @@
+h1 {
+color:blue;
+}
+
+.grid {
+display:grid;
+grid-template-areas:
+'section_0 section_0 section_0'
+'section_1 section_1 section_2'
+'section_1 section_1 section_3';
+gap:10px;
+padding:5px;
+
+background-color:grey;
+width:auto;
+height:0.5fr;
+}
+
+.section_0 {
+grid-area: section_0;
+background-color:red;
+}
+
+.section_1 {
+grid-area: section_1;
+background-color:yellow;
+}
+
+.section_2 {
+grid-area: section_2;
+background-color:purple;
+}
+
+.section_3 {
+grid-area: section_3;
+background-color:green;
+}
+
+/* Flex */
+.flex_box{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+background-color:grey
+}
+
+.flex_box *{
+background-color:blue;
+padding:10px;
+margin:5px;
+}
+
+/* Responsive */
+
+* {
+  box-sizing: border-box;
+  font-size:8px;
+}
+
+pre {
+word-break: break-all;
+}
+
+/* extras */
+.grid_subject{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+.css{
+width:0.3fr;
+}
+
+.html{
+width:0.5fr;
+}
+
+.flex_subject{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+.flex_css{
+width:0.3fr;
+}
+
+.flex_html{
+width:0.3fr;
+}
